@@ -1,10 +1,10 @@
-const Menu = ({ nameDish, priceDish, ingrDish, qwer }) => {
+const Menu = ({ nameDish, priceDish, ingrDish, odin }) => {
     return (
         <>
        <p>Блюдо - {nameDish}</p>
        <p>Цена - {priceDish}</p>
        <p>Ингридиенты - {ingrDish}</p>
-       <p>{qwer}</p>
+       <h1>{odin}</h1>
        </>
        
     );
