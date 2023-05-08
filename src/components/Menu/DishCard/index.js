@@ -3,7 +3,7 @@ import style from './DishCard.module.css'
 const DishCard = ({ item, onClickBuy = () => {} }) => {
     const ingridients = (
         <div className="text-2x1 text-center list-disc ">
-            <p className="text-zinc-900 ">{item.ingridients.join(", ")}</p>
+            <p className="text-zinc-900 ">продукт{item.ingridients.join(", ")}</p>
         </div>
     );
 
