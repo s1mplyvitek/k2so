@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import Menu from './components/Menu';
+import { Outlet } from 'react-router-dom';
+import MainMenu from './MainMenu';
 
 
 function App() {
@@ -20,7 +22,9 @@ function App() {
           <div>Number of goods: {cart.length}</div>
         </div>
       </div>
-      <Menu onItemBuy={(item => addCart(item))}></Menu>
+      <MainMenu />
+      <Outlet></Outlet>
+      {/* <Menu onItemBuy={(item => addCart(item))}></Menu> */}
     </div>
   );
 }

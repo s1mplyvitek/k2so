@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body { 
-  background: linear-gradient(to bottom right, rgb(116, 169, 204), rgb(5, 62, 88));
-  margin: 0; 
+body {
+  background-image: url("/public/content/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
