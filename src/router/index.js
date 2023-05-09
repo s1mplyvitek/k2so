@@ -5,6 +5,8 @@ import Menu from "../components/Menu";
 import ContactsPage from "../pages/ContactsPage";
 import MenuItem from "../pages/MenuItemPage";
 import MenuItemPage from "../pages/MenuItemPage";
+import ReviesPage from "../pages/ReviesPage";
+import OneMenu from "../pages/OneMenu";
 
 const router = createBrowserRouter([
     {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
                         element: <ContactsPage />,
                     },
                 ],
+            },
+            {
+                path: "revies", 
+                element: <ReviesPage />,
+            },
+            {
+                path: "buuzas",
+                element: <OneMenu />,
             },
         ],
 
