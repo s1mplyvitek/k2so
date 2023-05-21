@@ -1,27 +1,19 @@
 import { useState } from 'react';
-import Menu from './components/Menu';
+import Menu from './pages/MenuPage';
 import { Outlet } from 'react-router-dom';
-import MainMenu from './MainMenu';
+import MainMenu from './components/MainMenu';
+import CartWidget from './components/CartWidget';
+import CartProvider from './components/providers/CartProvider';
 
 
 function App() {
-  const [cart, setCart] = useState([]);
-
-  const addCart = item => {
-    setCart([...cart, item]);
-  };
-
 
 
   return (
     <div className="p-3 ">
-      <div className='my-5 mx-auto container flex flex-row-reverse text-right'>
-        <div>
-          <div className='text-xl'>Shopping cart</div>
-          <div>Total: {cart.reduce((sum, item) => (sum += item.price), 0)} rub</div>
-          <div>Number of goods: {cart.length}</div>
-        </div>
-      </div>
+      <CartProvider>
+        <CartWidget />
+      </CartProvider>      
       <MainMenu />
       <Outlet></Outlet>
       {/* <Menu onItemBuy={(item => addCart(item))}></Menu> */}

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import style from './DishCard.module.css'
+import { addToCart } from '../../store/slices/cartSlice';
+import { useDispatch } from 'react-redux';
 
-const DishCard = ({ item, onClickBuy = () => { } }) => {
+const DishCard = ({ item }) => {
+    const dispatch = useDispatch();
     const ingridients = (
         <div className="text-2x1 text-center list-disc ">
             <p className="text-zinc-900 ">Ingridients:{item.ingridients.join(", ")}</p>
@@ -17,7 +20,7 @@ const DishCard = ({ item, onClickBuy = () => { } }) => {
                 </Link>
 
                 <div className="p-2 text-xl">{ingridients}</div>
-                <button onClick={() => onClickBuy(item)} class="w-full bg-transparent hover:bg-blue-500 text-teal-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                <button onClick={() => dispatch(addToCart(item))} class="w-full bg-transparent hover:bg-blue-500 text-teal-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                     Buy
                 </button>
             </div>

@@ -1,12 +1,12 @@
 import { Link, Outlet, createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import AboutPage from "../pages/AboutPage";
-import Menu from "../components/Menu";
+import Menu from "../pages/MenuPage";
 import ContactsPage from "../pages/ContactsPage";
 import MenuItem from "../pages/MenuItemPage";
 import MenuItemPage from "../pages/MenuItemPage";
 import ReviesPage from "../pages/ReviesPage";
-import OneMenu from "../pages/OneMenu";
+import OneMenu from "../pages/OneMenuPage";
 
 const router = createBrowserRouter([
     {
